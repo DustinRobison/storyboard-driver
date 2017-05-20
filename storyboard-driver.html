@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="storyboard-driver">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `storyboard-driver`
+     * This element is a canvas to allow easy movement and navigation within sub elements.
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class StoryboardDriver extends Polymer.Element {
+      static get is() { return 'storyboard-driver'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'storyboard-driver'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(StoryboardDriver.is, StoryboardDriver);
+  </script>
+</dom-module>
